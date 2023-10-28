@@ -26,9 +26,9 @@ const About = () => {
               {/* text */}
               <Box color={'whiteAlpha.900'} rounded={'md'} mt={{base:'2rem'}} p={2}> 
                <Box>
-             <h2 className='h2 font-secondary text-accent text-center mb-2 font-bold'>About me</h2>
+             <h2 className='h2 text-accent text-center mb-2 font-bold'>About me</h2>
             
-             <Text mt={{md:2}} fontSize={{base:'15px', md:'20px'}} p={{base:0.8}} w={{base:'20rem',md:'46rem'}}  className='mb-4 font-secondary '>
+             <Text fontFamily={'sans-serif'} mt={{md:2}} fontSize={{base:'15px', md:'20px'}} p={{base:0.8}} w={{base:'20rem',md:'46rem'}}  className='mb-4 font-secondary '>
              My name is Joshua a passionate Front-end developer with amazing Potentials and 
              <Popover closeOnBlur={false} placement='bottom' initialFocusRef={initRef}>
             {({ isOpen, onClose }) => (

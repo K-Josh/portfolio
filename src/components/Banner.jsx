@@ -22,13 +22,15 @@ const Banner = () => {
                 {/* text */}
                 <div className="flex-1 text-center
                     font-secondary lg:text-left">
-              <motion.p 
+               {colorMode === 'dark' ? 
+              <>
+                 <motion.p 
                 variants={fadeIn('up', 0.4)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{once: false, amount: 0.7}}
                className="font-secondary text-center px-2 lg:text-left text-accent font-semibold">
-               My Name is
+               My <span className='text-white'>Name</span> is
              </motion.p>
              <motion.h1
              variants={fadeIn('up', 0.5)}
@@ -38,6 +40,51 @@ const Banner = () => {
                    once: false, 
                 amount:0.7
               }}
+            className='text-[40px] -mx-2 capitalize lg:text-[60px] font-semibold lg:leading-[0.9] text-white' >
+             Gaping <span>josue</span> 
+            </motion.h1>
+             <motion.div 
+                   variants={fadeIn('up', 0.5)}
+                  initial="hidden"
+                  whileInView={"show"}
+                   viewport={{
+                     once: false,
+                     amount: 0.7
+                        }}
+               className='mb-6 max-w-w text-[20px] lg:text-[30px]
+                font-secondary px-2 font-semibold uppercase leading-[1.5]'>
+            <span className="mr-1 text-white"> I am </span>
+                <TypeAnimation 
+                  sequence={['A Front-end Developer',3000,
+                            'A Front-end Developer',3000,
+                            ]}
+                    speed={40} className='text-accent'
+                    repeat={Infinity} wrapper='span'
+                        />
+              </motion.div>
+                <motion.p 
+            variants={fadeIn('up', 0.6)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: false, amount:0.7}}
+           className='mb-5 lg:w-[30rem] mx-auto lg:mx-0 text-white'> A Frontend-end Developer implementing UI/UX designs to the latter
+                </motion.p>
+              </>
+                :
+                <>
+                <motion.p 
+                variants={fadeIn('up', 0.4)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.7}}
+               className="font-secondary text-center px-2 lg:text-left text-accent font-semibold">
+               My <span className='text-black'>Name</span> is
+             </motion.p>
+             <motion.h1
+             variants={fadeIn('up', 0.5)}
+               initial="hidden"
+              whileInView={'show'}
+              viewport={{once: false, amount:0.7}}
             className='text-[40px] -mx-2 capitalize lg:text-[60px] font-semibold lg:leading-[0.9]' >
              Gaping <span>josue</span> 
             </motion.h1>
@@ -53,25 +100,24 @@ const Banner = () => {
                 font-secondary px-2 font-semibold uppercase leading-[1.5]'>
             <span className="mr-1"> I am </span>
                 <TypeAnimation 
-                     sequence={[
-                                'A Front-end Developer',
-                                3000,
-                                'A Front-end Developer',
-                                3000,
+                  sequence={[ 'A Front-end Developer',3000,
+                              'A Front-end Developer',3000,
                             ]}
                             speed={40}
                             className='text-accent'
                             repeat={Infinity}
                             wrapper='span'
                         />
-             </motion.div>
-            <motion.p 
+               </motion.div>
+               <motion.p 
             variants={fadeIn('up', 0.6)}
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount:0.7}}
            className='mb-5 lg:w-[30rem] mx-auto lg:mx-0'> A Frontend-end Developer implementing UI/UX designs to the latter
-            </motion.p>
+               </motion.p>
+                </>
+               }
               <motion.button
                variants={fadeIn('up', 0.6)}
               initial='hidden'

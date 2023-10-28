@@ -2,10 +2,9 @@ export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      primary: 'Poppins',
-      secondary: 'Proxima Nova',
-      tertiary: 'Rajdhani',
-    },
+      primary: 'Sans-serif',
+      secondary: 'Poppins',
+      },
     container: {
       padding: {
         DEFAULT: '15px',
