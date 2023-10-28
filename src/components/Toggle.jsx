@@ -7,14 +7,14 @@ const Header = () => {
     <div className='relative'>
      {colorMode === 'dark' ? 
      <Button m='1rem' position={'absolute'}
-      bottom={{base:'32rem', md: '2rem'}} cursor={'pointer'}
+      bottom={{base:'36rem', md: '2rem'}} cursor={'pointer'}
       pos={'fixed'} onClick={()=> toggleColorMode()}
      >
      {colorMode === 'dark' ? <BsFillSunFill /> : <BsFillMoonStarsFill /> }
      </Button>
       :
       <Button m='1rem' position={'absolute'}
-      bottom={{base:'32rem', md: '2rem'}} cursor={'pointer'} 
+      bottom={{base:'36rem', md: '2rem'}} cursor={'pointer'} 
       pos={'fixed'} onClick={()=> toggleColorMode()} bg={'gray.200'}
        >
      {colorMode === 'dark' ? <BsFillSunFill /> : <BsFillMoonStarsFill className='text-accent'/> }

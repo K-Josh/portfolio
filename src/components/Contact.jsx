@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 // variants
 import { fadeIn } from '../variants';
-import { useColorMode, Button } from '@chakra-ui/react';
+import { useColorMode} from '@chakra-ui/react';
 
 const Contact = () => {
   const {colorMode} = useColorMode()
