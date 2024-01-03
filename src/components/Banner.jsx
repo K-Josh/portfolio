@@ -14,51 +14,49 @@ import { Link } from 'react-scroll';
 const Banner = () => {
   const {colorMode} = useColorMode()
   return (
-        <section className=" min-h-[85vh] lg:min-h-screen
-        flex items-center" id="home">
-            <div className="container mx-auto">
+        <section className=" h-[100vh] w-[100vw] lg:min-h-screen flex items-center" id="home">
+            <div className="container max-w-[100vw]">
                 <div className="flex flex-col lg:flex-row
                 lg:items-center lg:gap-x-4 gap-y-7">
                 {/* text */}
-                <div className="flex-1 text-center
+                <div className="flex-1 lg:ml-[5rem] text-center
                     font-secondary lg:text-left">
                {colorMode === 'dark' ? 
               <>
-                 <motion.p 
+              <motion.p 
                 variants={fadeIn('up', 0.4)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{once: false, amount: 0.7}}
-               className="font-secondary text-center px-2 lg:text-left text-accent font-semibold">
-               My <span className='text-white'>Name</span> is
-             </motion.p>
-             <motion.h1
+               className="font-secondary text-center px-2 lg:text-left text-accent font-semibold text-[1.5rem] lg:text-[2rem]">
+               Hey <span className='text-white'>There <span className='animate-spin lg:text-2xl hover:animate-bounce text-[15px] cursor-pointer'>👋🏽</span></span> I am
+              </motion.p>
+              <motion.h1
              variants={fadeIn('up', 0.5)}
                initial="hidden"
               whileInView={'show'}
-              viewport={{
-                   once: false, 
-                amount:0.7
-              }}
-            className='text-[40px] -mx-2 capitalize lg:text-[60px] font-semibold lg:leading-[0.9] text-white' >
+              viewport={{once: false, amount:0.7}}
+            className='text-[3rem] lg:text-[8rem] -mx-2 capitalize font-semibold lg:leading-[0.9] text-white'>
              Gaping <span>josue</span> 
-            </motion.h1>
-             <motion.div 
-                   variants={fadeIn('up', 0.5)}
+              </motion.h1>
+              <motion.div 
+                variants={fadeIn('up', 0.5)}
                   initial="hidden"
                   whileInView={"show"}
                    viewport={{
                      once: false,
                      amount: 0.7
                         }}
-               className='mb-6 max-w-w text-[20px] lg:text-[30px]
+               className='mb-6 max-w-w text-[12px] lg:text-[5rem]
                 font-secondary px-2 font-semibold uppercase leading-[1.5]'>
-            <span className="mr-1 text-white"> I am </span>
                 <TypeAnimation 
-                  sequence={['A Front-end Developer',3000,
-                            'A Front-end Developer',3000,
-                            ]}
-                    speed={40} className='text-accent'
+                  sequence={[
+                    'A Front-end Developer',3000,
+                    'AND',1000,
+                    'A UI/UX Developer',3000,
+                           ]}
+                    speed={40} 
+                    className='text-accent text-[2rem] lg:text-[4rem]'
                     repeat={Infinity} wrapper='span'
                         />
               </motion.div>
@@ -67,7 +65,7 @@ const Banner = () => {
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount:0.7}}
-           className='mb-5 lg:w-[30rem] mx-auto lg:mx-0 text-white'> A Frontend-end Developer implementing UI/UX designs to the latter
+           className='mb-5 lg:w-[34vw] mx-auto lg:mx-0 text-white text-[2rem]'> A Frontend-end Developer implementing UI/UX designs to the latter
                 </motion.p>
               </>
                 :
@@ -77,45 +75,45 @@ const Banner = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{once: false, amount: 0.7}}
-               className="font-secondary text-center px-2 lg:text-left text-accent font-semibold">
-               My <span className='text-black'>Name</span> is
-             </motion.p>
-             <motion.h1
+               className="font-secondary text-center px-2 lg:text-left text-accent font-semibold text-[1.5rem] lg:text-[2rem]">
+               Hey <span className='text-black'>There <span className='animate-spin lg:text-2xl hover:animate-bounce text-[15px] cursor-pointer'>👋🏽</span></span> I am
+              </motion.p>
+              <motion.h1
              variants={fadeIn('up', 0.5)}
                initial="hidden"
               whileInView={'show'}
               viewport={{once: false, amount:0.7}}
-            className='text-[40px] -mx-2 capitalize lg:text-[60px] font-semibold lg:leading-[0.9]' >
+            className='text-[3rem] -mx-2 capitalize lg:text-[8rem] font-semibold lg:leading-[0.9]'>
              Gaping <span>josue</span> 
-            </motion.h1>
-             <motion.div 
-                   variants={fadeIn('up', 0.5)}
+              </motion.h1>
+                <motion.div 
+                variants={fadeIn('up', 0.5)}
                   initial="hidden"
                   whileInView={"show"}
                    viewport={{
                      once: false,
                      amount: 0.7
                         }}
-               className='mb-6 max-w-w text-[20px] lg:text-[30px]
+               className='mb-6 max-w-w text-[12px] lg:text-[5rem]
                 font-secondary px-2 font-semibold uppercase leading-[1.5]'>
-            <span className="mr-1"> I am </span>
                 <TypeAnimation 
-                  sequence={[ 'A Front-end Developer',3000,
-                              'A Front-end Developer',3000,
-                            ]}
-                            speed={40}
-                            className='text-accent'
-                            repeat={Infinity}
-                            wrapper='span'
+                  sequence={[
+                    'A Front-end Developer',3000,
+                    'AND',1000,
+                    'A UI/UX Developer',3000,
+                           ]}
+                    speed={40} 
+                    className='text-accent text-[2rem]'
+                    repeat={Infinity} wrapper='span'
                         />
-               </motion.div>
-               <motion.p 
+                </motion.div>
+                <motion.p 
             variants={fadeIn('up', 0.6)}
             initial="hidden"
             whileInView={'show'}
             viewport={{ once: false, amount:0.7}}
-           className='mb-5 lg:w-[30rem] mx-auto lg:mx-0'> A Frontend-end Developer implementing UI/UX designs to the latter
-               </motion.p>
+           className='mb-5 lg:w-[34vw] mx-auto lg:mx-0 text-[2rem]'> A Frontend-end Developer implementing UI/UX designs to the latter
+                </motion.p>
                 </>
                }
               <motion.button
@@ -123,12 +121,12 @@ const Banner = () => {
               initial='hidden'
               whileInView={"show"}
                 viewport={{once: false, amount: 0.7 }}
-                className='btn btn-lg mb-9 items-center mx-auto lg:mx-0'
+                className='btn lg:btn-lg btn-sm mb-[2rem] items-center lg:mx-0'
                 >
                  <Link to="contact"
                   activeClass='active'
                   smooth={true}
-                  spy={true}>Contact Me</Link>
+                  spy={true} className='text-[14px] whitespace-nowrap'>Contact Me</Link>
               </motion.button>
               {/* socials */}
                {colorMode === 'dark' ? 
@@ -178,10 +176,10 @@ const Banner = () => {
                 variants={fadeIn('down', 0.5)}
                 initial="hidden"
                 whileInView={"show"}
-                className='my-7 lg:flex flex-1 hidden'
+                className='my-7 ml-[4rem] lg:flex flex-1 hidden'
                  >
-                <img className='hover:scale-95 w-[25rem] h-[25rem] 
-                rounded-full'  src={Image} alt='programming'/>
+                <img className='hover:scale-95 w-[30vw] h-[40rem] 
+                rounded-xl animate-pulse transition-all ease-in-out duration-300'  src={Image} alt='programming'/>
             </motion.div>
                 </div>
             </div>

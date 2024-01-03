@@ -11,7 +11,7 @@ const About = () => {
    const {colorMode} = useColorMode();
    const initRef = React.useRef();
   return (
-    <section className="section" id='about'>
+    <section className="section w-[100vw] " id='about'>
         <div className="container mx-auto">
         
            <VStack position={'relative'}>
@@ -28,7 +28,7 @@ const About = () => {
                <Box>
              <h2 className='h2 text-accent text-center mb-2 font-bold'>About me</h2>
             
-             <Text fontFamily={'sans-serif'} mt={{md:2}} fontSize={{base:'15px', md:'20px'}} p={{base:0.8}} w={{base:'20rem',md:'46rem'}}  className='mb-4 font-secondary '>
+             <Text fontFamily={'sans-serif'} mt={{md:2}} fontSize={{base:'15px', md:'20px'}} p={{base:0.8}} w={{base:'20rem',md:'46vw'}}  className='mb-4 font-secondary'>
              My name is Joshua a passionate Front-end developer with amazing Potentials and 
              <Popover closeOnBlur={false} placement='bottom' initialFocusRef={initRef}>
             {({ isOpen, onClose }) => (
@@ -47,7 +47,7 @@ const About = () => {
               <PopoverBody>
                 <Box>
                   <Text fontSize={{base:'13px', md:'16px'}}>
-                  HTML5, CSS, TailwindCSS, Bootstrap,  
+                  HTML5, CSS, TailwindCSS, Bootstrap,Docker,  
                   ChakraUI, Javascript, Reactjs
                   </Text>
                 </Box>
@@ -74,7 +74,40 @@ const About = () => {
                   activeClass='active'
                   smooth={true}
                   spy={true}> <button className='btn btn-sm'>Contact me</button></Link>
-            <a href="#" className='text-gradient text-[16px] btn-Link'>My Resume</a>
+            <Popover closeOnBlur={false} placement='right' className='text-gradient text-[16px] btn-Link'
+            initialFocusRef={initRef}>
+            {({ isOpen, onClose }) => (
+         <>
+          <PopoverTrigger>
+            <Text mx={2} w={{md:'3.6rem'}} h={{md:'2rem'}} className='whitespace-nowrap'>
+            <span className='capitalize text-gradient cursor-pointer'>
+               My Resume
+              </span> {isOpen ? '' : ''}
+              </Text>
+          </PopoverTrigger>
+          <Portal>
+            <PopoverContent bg={'black'}>
+              <PopoverHeader>My Resume</PopoverHeader>
+              <PopoverCloseButton />
+              <PopoverBody>
+                <Box>
+                <iframe src='/Images/my resume.pdf'></iframe>
+                </Box>
+                <Button
+                  mt={4}
+                  bg='orange.500'
+                  onClick={onClose}
+                  ref={initRef}
+                >
+                  Close
+                </Button>
+              </PopoverBody>
+            </PopoverContent>
+          </Portal>
+        </>
+      )}
+            </Popover>
+            <a href=''>My resume</a>
             </div>
             </Box>
               </Box>
@@ -86,14 +119,6 @@ const About = () => {
                 viewport={{once: false, amount: 0.3}}
                 className='absolute transition-all ease-out duration-700 top-[18rem] left-[64rem]'
                >
-              <Box className='transition-all ease-in-out duration-500'>
-              <Avatar
-              cursor={'pointer'}
-              w={{base:'', md:'8rem'}}
-              h={{base:'', md:'8rem'}}
-             src='/Images/Jo.jpg' 
-             alt="" />
-                </Box>
                </motion.div>
              </Box>
 
@@ -110,7 +135,7 @@ const About = () => {
               <Box color={'black'} rounded={'md'} mt={{base:'2rem'}} p={2}> 
                <Box>
              <h2 className='h2 font-secondary text-accent lg:text-center mb-2 font-bold'>About me</h2>  
-             <Text mt={{md:2}} fontSize={{base:'15px', md:'20px'}} w={{base:'20rem', md:'46rem'}}  className='mb-4 font-secondary '>
+             <Text mt={{md:2}} fontSize={{base:'15px', md:'20px'}} w={{base:'20rem', md:'46vw'}}  className='mb-4 font-secondary '>
              My name is Joshua a passionate Front-end developer with amazing Potentials and 
              <Popover closeOnBlur={false} placement='bottom' initialFocusRef={initRef}>
             {({ isOpen, onClose }) => (
@@ -129,7 +154,7 @@ const About = () => {
               <PopoverBody>
                 <Box>
                   <Text fontSize={{base:'13px', md:'16px'}}>
-                  HTML5, CSS, TailwindCSS, Bootstrap,  
+                  HTML5, CSS, TailwindCSS, Bootstrap, Docker,  
                   ChakraUI, Javascript, Reactjs
                   </Text>
                 </Box>

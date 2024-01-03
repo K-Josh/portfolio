@@ -8,7 +8,7 @@ import Toggle from './components/Toggle';
 
 const App = () => {
   return (
-     <div className='overflow-hidden'>
+     <div className='overflow-x-hidden'>
       <Toggle />
       <Banner />
       <Nav />

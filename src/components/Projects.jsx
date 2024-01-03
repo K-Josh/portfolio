@@ -104,7 +104,7 @@ const Projects = () => {
            </a>
            <a href='https://github.com/K-Josh/Travel_Agency.git' className='hover:text-accent'>See Code</a>
 
-           <a href=''>
+           <a href='https://tesla-advert.netlify.app'>
         <div className='group relative overflow-hidden border-2
         border-white/50 rounded-xl lg:w-[17rem] lg:h-[16rem]'>
         {/* overlay */}
@@ -126,7 +126,7 @@ const Projects = () => {
          </div>
         </div>
            </a>
-           <a href='https://github.com/K-Josh/Travel_Agency.git' className='hover:text-accent'>See Code</a>
+           <a href='https://github.com/K-Josh/figmaUI.git' className='hover:text-accent'>See Code</a>
           </div>
           </> 
            : 

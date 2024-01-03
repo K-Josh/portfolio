@@ -9,67 +9,66 @@ import { Link } from 'react-scroll';
 const Nav = () => {
   const {colorMode} = useColorMode()
   return (
-    <nav className="fixed bottom-2 lg-bottom-8 w-full overflow-hidden z-40" >
+    <nav className="fixed bottom-2 lg-bottom-7 w-full overflow-hidden z-40" >
         <div className="container mx-auto">
             {/* nav inner */}
              {colorMode === 'dark' ? 
-             <div className='w-full bg-gradient-to-r from-[#B71375] via-[#8B1874] to-[#F86F03] rounded-full
-            max-w-[370px] px-5 flex items-center text-xl mx-auto
-            h-[4rem] backdrop-blur-2xl justify-between text-white'>
+             <div className='w-full rounded-full opacity-70 max-w-[370px] px-5 flex items-center text-xl mx-auto
+            h-[6rem] backdrop-blur-2xl border border-1 justify-between text-[#FA7436]'>
               <Link 
                   to="home"
                   offset={-200}
-                  activeClass='active'
+                  activeClass='glass'
                   smooth={true}
                   spy={true}
-                  className='flex cursor-pointer w-[60px] justify-center items-center'
+                  className='flex cursor-pointer w-[50px] justify-center items-center'
               >
-                <BiHomeAlt />
+                <BiHomeAlt className='text-[1.6rem]'/>
               </Link>
 
               <Link 
                   to="about"
-                  activeClass='active'
+                  activeClass='glass'
                   smooth={true}
                   spy={true}
-                  className='flex cursor-pointer w-[60px] justify-center items-center'
+                  className='flex cursor-pointer w-[50px] justify-center items-center'
               >
-                <BiUser />
+                <BiUser className='text-[1.6rem]'/>
               </Link>
 
               <Link 
                   to="projects"
-                  activeClass='active'
+                  activeClass='glass'
                   smooth={true}
                   spy={true}
-                  className='flex cursor-pointer w-[60px] justify-center items-center'
+                  className='flex cursor-pointer w-[50px] justify-center items-center'
               >
-                <BsBriefcase />
+                <BsBriefcase className='text-[1.6rem]'/>
               </Link>
 
               <Link 
                   to="contact"
-                  activeClass='active'
+                  activeClass='glass'
                   smooth={true}
                   spy={true}
-                  className='flex cursor-pointer w-[60px] justify-center items-center'
+                  className='flex cursor-pointer w-[50px] justify-center items-center'
               >
-                <BsChatSquare />
+                <BsChatSquare className='text-[1.6rem]'/>
               </Link>
             </div>
               : 
-              <div className='w-full bg-gradient-to-tr from-[#8B1874] via-[#B71375] to-[#F86F03] rounded-full
+              <div className='w-full navbar rounded-full
             max-w-[370px] px-5 flex items-center text-xl mx-auto
-            h-[4rem] backdrop-blur-2xl justify-between text-white/75'>
+            h-[6rem] backdrop-blur-2xl justify-between'>
               <Link 
                   to="home"
                   offset={-200}
                   activeClass='active'
                   smooth={true}
                   spy={true}
-                  className='flex cursor-pointer w-[60px] justify-center items-center'
+                  className='flex cursor-pointer w-[50px] justify-center items-center'
               >
-                <BiHomeAlt />
+                <BiHomeAlt className='text-[1.6rem]'/>
               </Link>
 
               <Link 
@@ -77,9 +76,9 @@ const Nav = () => {
                   activeClass='active'
                   smooth={true}
                   spy={true}
-                  className='flex cursor-pointer w-[60px] justify-center items-center'
+                  className='flex cursor-pointer w-[50px] justify-center items-center'
               >
-                <BiUser />
+                <BiUser className='text-[1.6rem]'/>
               </Link>
 
               <Link 
@@ -87,9 +86,9 @@ const Nav = () => {
                   activeClass='active'
                   smooth={true}
                   spy={true}
-                  className='flex cursor-pointer w-[60px] justify-center items-center'
+                  className='flex cursor-pointer w-[50px] justify-center items-center'
               >
-                <BsBriefcase />
+                <BsBriefcase className='text-[1.6rem]'/>
               </Link>
 
               <Link 
@@ -97,9 +96,9 @@ const Nav = () => {
                   activeClass='active'
                   smooth={true}
                   spy={true}
-                  className='flex cursor-pointer w-[60px] justify-center items-center'
+                  className='flex cursor-pointer w-[50px] justify-center items-center'
               >
-                <BsChatSquare />
+                <BsChatSquare className='text-[1.6rem]'/>
               </Link>
              </div>
               }
